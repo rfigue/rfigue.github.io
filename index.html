@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>RocketLynx</title>
 
     <style>
@@ -40,11 +41,11 @@
 
         .tab button {
             background-color: gold;
-            float: left;
+            float: right;
             border: none;
             outline: none;
             cursor: pointer;
-            padding: 14px 16px;
+            padding: 14px 60px;
             transition: 0.3s;
         }
 
@@ -62,23 +63,46 @@
             border-top: none;
         }
 
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+
     </style>
 </head>
 <body>
 
-<h1 align="left"> <img src="Users/IMG_0065.PNG" width="400" height="60"></h1>
+<h1 style="margin-left: -5cm" align="left">
+    <img style="margin-bottom: -.5cm" src="Users/IMG_0065.PNG" width="400" height="60">
+    <a style="margin-left: 30cm; margin-top: -2cm; margin-bottom: -3mm" href="https://www.facebook.com/RocketLynx/" class="fa fa-facebook"></a>
+</h1>
+
 
 <div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
-    <button class="tablinks" onclick="openCity(event, 'Projects')">Projects</button>
-    <button class="tablinks" onclick="openCity(event, 'Who We Are')">Who We Are</button>
-    <button class="tablinks" onclick="openCity(event, 'Sponsors')">Sponsors</button>
-    <button class="tablinks" onclick="openCity(event, 'Contact')">Contact</button>
     <button class="tablinks" onclick="openCity(event, 'Donate')">Donate</button>
+    <button class="tablinks" onclick="openCity(event, 'Contact Us')">Contact Us</button>
+    <button class="tablinks" onclick="openCity(event, 'Sponsors')">Sponsors</button>
+    <button class="tablinks" onclick="openCity(event, 'Who We Are')">Who We Are</button>
+    <button class="tablinks" onclick="openCity(event, 'Projects')">Projects</button>
+    <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
 </div>
 
 <div id="Home" class="tabcontent">
-    <h3 style="font-size: 30px;" align="center"> Home</h3>
+    <h3 style="font-size: 30px;" align="center"> HOME</h3>
     <p style="font-size: 22px; color: white" align="left"> Greetings and welcome to our RocketLynx team web page!
         <br>
         <br>
@@ -103,12 +127,12 @@
 </div>
 
 <div id="Projects" class="tabcontent">
-    <h3 style="font-size: 30px;" align="center">Projects</h3>
+    <h3 style="font-size: 30px;" align="center">PROJECTS</h3>
     <p></p>
 </div>
 
 <div id="Who We Are" class="tabcontent">
-    <h3 style="font-size: 30px;" align="center">Meet The Team</h3>
+    <h3 style="font-size: 30px;" align="center">MEET THE TEAM</h3>
     <p style="font-size: 22px; color: white;" align="left">The RocketLynx project is an initiative taken mostly by upper-level mechanical
         engineering students of the University of Colorado-Denver. The team consists of
         students and affiliates of different backgrounds: computer science; electrical, aerospace,
@@ -153,17 +177,17 @@
 </div>
 
 <div id="Sponsors" class="tabcontent">
-    <h3 style="font-size: 30px;" align="center">Sponsors</h3>
+    <h3 style="font-size: 30px;" align="center">SPONSORS</h3>
     <p></p>
 </div>
 
-<div id="Contact" class="tabcontent">
-    <h3 style="font-size: 30px;" align="center">Contact</h3>
+<div id="Contact Us" class="tabcontent">
+    <h3 style="font-size: 30px;" align="center">CONTACT US</h3>
     <p></p>
 </div>
 
 <div id="Donate" class="tabcontent">
-    <h3 style="font-size: 30px" align="center">Donate</h3>
+    <h3 style="font-size: 30px" align="center">DONATE</h3>
     <p></p>
 </div>
 
