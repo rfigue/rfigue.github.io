@@ -81,6 +81,37 @@
             color: white;
         }
 
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: dodgerblue;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #1e76e2;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-left: 7cm;
+            margin-right: 7cm;
+        }
 
     </style>
 </head>
@@ -93,12 +124,12 @@
 
 
 <div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'Donate')">Donate</button>
-    <button class="tablinks" onclick="openCity(event, 'Contact Us')">Contact Us</button>
-    <button class="tablinks" onclick="openCity(event, 'Sponsors')">Sponsors</button>
-    <button class="tablinks" onclick="openCity(event, 'Who We Are')">Who We Are</button>
-    <button class="tablinks" onclick="openCity(event, 'Projects')">Projects</button>
-    <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
+    <button class="tablinks" onclick="openTab(event, 'Donate')">Donate</button>
+    <button class="tablinks" onclick="openTab(event, 'Contact Us')">Contact Us</button>
+    <button class="tablinks" onclick="openTab(event, 'Sponsors')">Sponsors</button>
+    <button class="tablinks" onclick="openTab(event, 'Who We Are')">Who We Are</button>
+    <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
+    <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
 </div>
 
 <div id="Home" class="tabcontent">
@@ -110,7 +141,7 @@
         <br>
         <br>
         As of right now, we intent to participate in the Spaceport America Cup 2020 where we'll be competing
-        against top colleges in the nation. <br>We are a small group of engineers and computer scientist base out
+        against top colleges in the nation. <br>We are a small group of engineers and computer scientist based out
         of University of Colorado Denver.
         <br>
         <br>
@@ -143,13 +174,13 @@
     <figure>
         <img src="Users/IMG_2217.JPG" alt="RUDY" style= "float: left; margin-left: 4.2cm" WIDTH="172" HEIGHT="172">
 
-        <figcaption style="color: white; border:2px; border-style:solid; border-color:black; margin-left: 9cm; margin-bottom: -3cm; padding: 37px" >
+        <figcaption style=" font-size: 18px; color: white; border:2px; border-style:solid; border-color:lightyellow; margin-left: 9cm; margin-bottom: -3cm; padding: 30px" >
             Hi, my name is Rudy Figueroa and I'm the team's lead software developer and marketing manager. I just recently graduated from CSU
             - Fort Collins with a degree in Computer Science and a minor in Math.... GO RAMS!!! My role in this team is to program the sensors for the rocket,
-            and the marketing which entails creating the website and managing social media.
+            and the marketing which entails creating the website and managing the social media.
             <br>
             <br>
-            Some of my hobbies include: Coding, Tutoring, Playing Golf, Snowboarding, Hunting, Fishing, and just the outdoors in general.
+            Some of my hobbies include: Coding, Tutoring, Golf, Snowboarding, Hunting, Fishing, and just the outdoors in general.
         </figcaption>
     </figure>
     <br>
@@ -183,7 +214,25 @@
 
 <div id="Contact Us" class="tabcontent">
     <h3 style="font-size: 30px;" align="center">CONTACT US</h3>
-    <p></p>
+        <div class="container">
+            <form method="post" action="send_mail.php" >
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="name" placeholder="Full Name.." required>
+
+                <label>Email</label>
+                <br>
+                <input type="email" id="email-address" name="email" placeholder="Your Email Address.." required>
+                <br>
+                <br>
+                <label>Subject</label>
+                <input type="text" id="sub" name="subject" placeholder="Enter Subject..">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit" name="submit">
+            </form>
+        </div>
 </div>
 
 <div id="Donate" class="tabcontent">
@@ -192,7 +241,7 @@
 </div>
 
 <script>
-    function openCity(evt, cityName) {
+    function openTab(evt, tabName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
@@ -202,9 +251,10 @@
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
-        document.getElementById(cityName).style.display = "block";
+        document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " active";
     }
+
 </script>
 </body>
 </html>
