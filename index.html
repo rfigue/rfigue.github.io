@@ -215,23 +215,31 @@
 <div id="Contact Us" class="tabcontent">
     <h3 style="font-size: 30px;" align="center">CONTACT US</h3>
         <div class="container">
-            <form method="post" action="send_mail.php" >
+           <form id="contact-form">
+             <div class="form-group center-block">
                 <label for="fname">Name</label>
                 <input type="text" id="fname" name="name" placeholder="Full Name.." required>
-
-                <label>Email</label>
-                <br>
-                <input type="email" id="email-address" name="email" placeholder="Your Email Address.." required>
-                <br>
-                <br>
-                <label>Subject</label>
+             </div>
+             <div class="form-group center-block">
+                <label for= "email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address.." required>
+            </div>
+            <div class="form-group center-block">
+                <label for="sub">Subject</label>
                 <input type="text" id="sub" name="subject" placeholder="Enter Subject..">
-
+            </div>
+            <div class="form-group center-block">
                 <label for="message">Message</label>
+                <br>
                 <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
-
-                <input type="submit" value="Submit" name="submit">
-            </form>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-default" type="submit" id="email-submit-btn" value="Send">
+                 Submit
+                </button>
+            </div>
+        <span></span>
+      </form>
         </div>
 </div>
 
@@ -254,7 +262,29 @@
         document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " active";
     }
+    
+    $(document).ready(function() {
+    $('#contact-form').submit(function(e) {
+    var name    = document.getElementById('fname')
+    var email   = document.getElementById('email')
+    var message = document.getElementById('message')
 
+    if (!name.value || !email.value || !message.value) {
+      alertify.error("Please check your entries");
+      return false;
+    } else {
+      $.ajax({
+        method: 'POST',
+        url: '//formspree.io/figueroarudy14@gmail.com',
+        data: $('#contact-form').serialize(),
+        datatype: 'json'
+      });
+      e.preventDefault();
+      $(this).get(0).reset();
+      alertify.success("Message sent");
+    }
+  });
+});
 </script>
 </body>
 </html>
