@@ -11,10 +11,10 @@ if(isset($_POST['submit']){
     $message = $_POST['message'];
 
     $webmaster_email = "figueroarudy14@gmail.com";
-    $headers = "FROM: ".mailFROM;
-    $txt = "You have received an email from ".name."\n\n".message;
+    $headers = "FROM: ".$mailFROM;
+    $txt = "You have received an email from ".$name."\n\n".$message;
 
-    mail(webmaster_email, subject, txt, headers);
+    mail($webmaster_email, $subject, $txt, $headers);
     header("Location: index.html?mailsend");
 }
 ?>
