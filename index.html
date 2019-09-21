@@ -210,6 +210,16 @@
         @media only screen and (max-width: 300px) {
             .prev, .next,.text {font-size: 11px}
         }
+
+        .pic {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+
+        .pic:hover {
+            opacity: .3;
+            filter: alpha(opacity=30);
+        }
     </style>
 </head>
 <body>
@@ -293,7 +303,10 @@
 
 <div id="Projects" class="tabcontent">
     <h3 style="font-size: 30px;" align="center">PROJECTS</h3>
-    <p></p>
+    <video style="margin-left: 8.5cm" width="1000" controls>
+        <source src="Users/RocketLynxVideoFinalEdit.MP4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
 </div>
 
 <div id="Who We Are" class="tabcontent">
@@ -303,8 +316,8 @@
         students and affiliates of different backgrounds: computer science; electrical, aerospace,
         and civil engineering; hobbyist rocketeers; social sciences; and visual arts.</p>
 
-    <figure >
-        <p><a href="https://www.linkedin.com/in/dalko-jeri/"><img src="Users/DalkoPapiChulo.jpg" alt="Dalko" style= "float: bottom;
+    <figure>
+        <p><a href="https://www.linkedin.com/in/dalko-jeri/"><img src="Users/DalkoPapiChulo.jpg" alt="Dalko" class="pic" style= "float: bottom;
          margin-left: 13.7cm" WIDTH="180" HEIGHT="250" ></a></p>
         <figcaption style="color: white; margin-left: 20cm">
             Dalko H. Jeri
@@ -312,7 +325,7 @@
     </figure>
 
     <figure>
-        <img src="Users/ThomasMartinez.jpg" alt="Thomas" style= "margin-left: 13cm" WIDTH="180" HEIGHT="250">
+        <img src="Users/ThomasMartinez.jpg" alt="Thomas" class="pic" style= "margin-left: 13cm" WIDTH="180" HEIGHT="250">
         <br>
         <br>
         <figcaption style="color: white; margin-left: 13.5cm">
@@ -321,7 +334,7 @@
     </figure>
 
     <figure>
-        <img src="Users/GrantNeville.jpg" alt="Grant" style= "margin-top: -10.05cm; margin-left: 25cm" WIDTH="180" HEIGHT="250">
+        <img src="Users/GrantNeville.jpg" class="pic" alt="Grant" style= "margin-top: -10.05cm; margin-left: 25cm" WIDTH="180" HEIGHT="250">
 
         <figcaption style="color: white; margin-left: 26cm; margin-top: -1.5cm">
             Grant Neville
@@ -329,15 +342,11 @@
     </figure>
 
     <figure>
-        <img src="Users/IMG_2217.JPG" alt="RUDY" style= "float: bottom; margin-left: 4.2cm" WIDTH="172" HEIGHT="172">
-
-        <figcaption style=" font-size: 18px; color: white; border:2px; border-style:solid; border-color:lightyellow; margin-left: 9cm; margin-bottom: -3cm; padding: 30px" >
-            Hi, my name is Rudy Figueroa and I'm the team's lead software developer and marketing manager. I just recently graduated from CSU
-            - Fort Collins with a degree in Computer Science and a minor in Math.... GO RAMS!!! My role in this team is to program the sensors for the rocket,
-            and the marketing which entails creating the website and managing the social media.
-            <br>
-            <br>
-            Some of my hobbies include: Coding, Tutoring, Golf, Snowboarding, Hunting, Fishing, and just the outdoors in general.
+        <img src="Users/IMG_2217.JPG" alt="RUDY" class="pic" style= "float: bottom; margin-left: 4.2cm" WIDTH="172" HEIGHT="172">
+        <br>
+        <br>
+        <figcaption style=" font-size: 18px; color: white; margin-left: 4.4cm; margin-bottom: -3cm" >
+           Rudy Figueroa Jr.
         </figcaption>
     </figure>
     <br>
