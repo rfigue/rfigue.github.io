@@ -54,7 +54,7 @@
             border: none;
             outline: none;
             cursor: pointer;
-            padding: 14px 60px;
+            padding: 18px 60px;
             transition: 0.3s;
         }
 
@@ -253,61 +253,27 @@
             filter: alpha(opacity=30);
         }
 
-        .social {
-            position: absolute;
-            width: 100%;
-            top: 50%;
-            text-align: center;
-            transform: translateY(-50%);
-
-            margin-bottom: 11cm;
-            margin-top: -11cm;
-            margin-right: -20cm;
-            margin-left: 20cm;
-        }
-
-        .social .link {
-            display: inline-block;
-            vertical-align: middle;
-            position: relative;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 2px dashed white;
-            background-clip: content-box;
-            padding: 10px;
-            transition: .5s;
-            color: #D7D0BE;
-            margin-left: 15px;
-            margin-right: 15px;
-            font-size: 50px;
-        }
-
-        .social .link span {
-            display: block;
-            position: absolute;
-            text-align: center;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-        }
-
-        .social .link:hover {
+        .fa {
             padding: 20px;
-            color: white;
-            margin-left: -5px;
-            transform: translateX(10px) rotate(360deg);
-        }
-
-        .social .link.facebook {
-            background-color: #3B5998;
-            color: white;
-
-
+            font-size: 30px;
+            width: 60px;
+            height: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
 
         }
 
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+            margin-left: 3cm;
+            margin-top: -1mm;
+        }
 
     </style>
 </head>
@@ -318,10 +284,6 @@
     <p><a href="https://www.RocketLynx.org"><img src="Users/RocketLynxLogo.png" alt="RocketLynx" style= "margin-bottom: -.5cm;
         margin-top: -1cm; margin-left: .5cm" WIDTH="400" HEIGHT="60" ></a></p>
 
-    <div class="social">
-    <a href="https://www.facebook.com/RocketLynx/" class="link facebook" target="_parent">
-        <span class="fa fa-facebook-square"></span></a>
-    </div>
 </h1>
 
 
@@ -331,6 +293,7 @@
     <button class="tablinks" onclick="openTab(event, 'Who We Are')" style="font-size: 15px">Who We Are</button>
     <button class="tablinks" onclick="openTab(event, 'Projects')" style="font-size: 15px">Projects</button>
     <button class="tablinks" onclick="openTab(event, 'Home')" style="font-size: 15px">Home</button>
+    <a href="https://www.facebook.com/RocketLynx/" class="fa fa-facebook"></a>
 </div>
 
 
@@ -502,6 +465,7 @@
         </figcaption>
     </figure>
 
+    <p STYLE="color: white; font-size: 30px; margin-left: 20.2cm; margin-top: 2cm">MENTORS</p>
     <figure>
         <p1><a href="John.html"><img src="Users/John%20Jamieson%20(Prefect%20Tripoli%20Colorado).jpg" class="pic" alt="Marcos" style= "margin-left: 10cm; margin-top: 2cm" WIDTH="180" HEIGHT="250">
         </a></p1>
@@ -525,7 +489,7 @@
 
         <br>
         <br>
-        <figcaption style="color: white; margin-left: 19cm; margin-top: -1.9cm" >
+        <figcaption style="color: white; margin-left: 19cm; margin-top: -2.4cm" >
            Rudy Figueroa Jr.
         </figcaption>
     </figure>
@@ -540,7 +504,7 @@
         </div>
         <br>
         <br>
-        <figcaption style="color: white; margin-left: 28.5cm; margin-top: -2.3cm" >
+        <figcaption style="color: white; margin-left: 28.5cm; margin-top: -2.8cm" >
             Eric Hernandez
         </figcaption>
     </figure>
@@ -579,7 +543,17 @@
 
 <div id="Donate" class="tabcontent">
     <h3 style="font-size: 30px" align="center">DONATE</h3>
-    <p></p>
+    <p style="color: white; font-size: 25px">Thanks for your interest in helping our project grow to a higher potential.
+        We appreciate your donation, and will keep you updated on our project progress through our Facebook site.
+        Should there be any questions or concerns please let us know by emailing us directly at rocketlynx.denver@gmail.com
+        <br>
+        <br>
+        -Dalko H. Jeri
+        <br>
+        <br>
+        For Donations:
+        <a href="https://giving.cu.edu/fund/mechanical-engineering-senior-design-projects">https://giving.cu.edu/fund/mechanical-engineering-senior-design-projects</a>
+        .Enter "RocketLynx" under the "Comments" section right after clicking on "Give Now".</p>
 </div>
 
 <script>
